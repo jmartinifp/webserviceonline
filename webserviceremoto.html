@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi App</title>
+</head>
+<body>
+  <h1>Obtener datos</h1>
+  <button onclick="traerDatos()">Cargar datos</button>
+  <div id="resultado"></div>
+
+  <script>
+    function traerDatos() {
+        alert("hola");
+        const url= 'http://prueba2024blabla.onlinewebshop.net/listarrecord.php';
+      fetch(url)
+        .then(res => res.json())
+        .then(datos => {
+          document.getElementById('resultado').innerHTML = 
+            '<p>' + JSON.stringify(datos) + '</p>';
+        })
+        .catch(err => {
+          document.getElementById('resultado').innerHTML = 
+            '<p style="color:red;">Error: ' + err + '</p>';
+        });
+    }
+  </script>
+</body>
+</html>
