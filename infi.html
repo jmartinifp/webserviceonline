@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch HTML Example</title>
+</head>
+<body>
+
+<button id="loadBtn">Load HTML</button>
+<div id="content"></div>
+
+<script>
+document.getElementById('loadBtn').addEventListener('click', () => {
+  fetch('https://webserviceepastillero.free.nf/pastillas.php')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('content').innerHTML = html;
+    });
+});
+</script>
+
+</body>
+</html>
