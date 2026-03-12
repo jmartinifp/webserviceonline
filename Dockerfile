@@ -1,11 +1,12 @@
-FROM php:8.2-apache
+FROM php:8.2-fpm
+
+RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/html
 
 COPY . .
 
-RUN a2dismod mpm_prefork mpm_worker && a2enmod mpm_event && a2enmod rewrite
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
-
-CMD ["apache2-foreground"]
+]
