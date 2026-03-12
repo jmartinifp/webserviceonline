@@ -1,0 +1,8 @@
+<?php
+
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+header("Access-Control-Allow-Headers: Content-Type");
+?>
+[{"id":1,"nombre":"ibuprofeno333","duracion":"2026-10-20","hora":"23:59:59","idUsuario":2},{"id":5,"nombre":"Pastilla para el dolor  brazos","duracion":"2026-12-02","hora":"23:00:00","idUsuario":1},{"id":6,"nombre":"Pastilla para el dolor  de est\u00f3mago","duracion":"2026-12-02","hora":"23:00:00","idUsuario":1},{"id":7,"nombre":"servidor","duracion":"2026-03-11","hora":"10:00:00","idUsuario":1},{"id":8,"nombre":"servidor","duracion":"2026-03-11","hora":"10:00:00","idUsuario":2}]
